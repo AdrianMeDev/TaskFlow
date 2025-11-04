@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "allauth.headless",
     "rest_framework",
     "drf_spectacular",
+    "api",
 ]
 
 MIDDLEWARE = [
