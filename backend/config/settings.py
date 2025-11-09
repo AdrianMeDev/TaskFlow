@@ -145,3 +145,8 @@ HEADLESS_FRONTEND_URLS = {
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
+
+ACCOUNT_EMAIL_VERIFICATION = "optional"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+LOGIN_REDIRECT_URL = "secret"

@@ -22,6 +22,8 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+from django.urls import re_path
+from api import views as api_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -39,4 +41,6 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
+    # A simple secret page used for testing LOGIN_REDIRECT_URL
+    re_path(r"^secret/$", api_views.secret_view, name="secret"),
 ]
